@@ -1,0 +1,169 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #00c7c0;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --main-transition: 0.4s;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* S-components */
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* E-components */
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  transition: var(--main-transition);
+}
+.main-btn:hover {
+  color: #eeff00;
+}
+/* S-navbar */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+  transition: var(--main-transition);
+}
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+}
+.navbar .search {
+  color: var(--green-color);
+  border-left: 2px solid var(--green-color);
+}
+/* E-navbar */
+/* S-landing */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 68.38px);
+  background-image: url("../imgs/01.jpg");
+  background-position: center;
+  background-size: cover;
+}
+/* E-landing */
+/* S-features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features h4 {
+  color: var(--yellow-color);
+}
+/* E-features */
+/* S-work */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work li:not(:first-child):hover {
+  color: var(--red-color);
+}
+.our-work .box {
+  overflow: hidden;
+}
+.our-work .box::after {
+  content: attr(data-work);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  background-color: #00c7c0a2;
+  transition: var(--main-transition);
+}
+.our-work .box:hover::after {
+  left: 50%;
+}
+/* E-work */
+/* S-stuff */
+.stuff .description {
+  max-width: 500px;
+}
+/* E-stuff */
+/* S-team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team h4 {
+  background-color: var(--green-color);
+}
+/* E-team */
+/* S-project */
+.project {
+  background-color: var(--dark-color);
+}
+/* E-project */
+/* S-subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe form input[type="text"] {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.subscribe form input::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+/* E-subscribe */
+/* S-footer */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .creator span {
+  color: var(--green-color);
+}
+.footer .history span {
+  color: var(--yellow-color);
+}
+/* E-footer */
